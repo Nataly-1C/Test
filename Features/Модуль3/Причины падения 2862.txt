@@ -1,0 +1,21 @@
+Все 7 подений. С английским плохо и что делает конфигурация не сильно понятно) Предположения следующие: 
+
+1.Мне кажется падения начались с 2060018 не смог найти строчку
+| 'Currency' | 'Price' | 'Quantity' | 'Row presentation' | 'Unit' |
+| 'TRY' | '100,00' | '10,000' | 'Dress (S/Yellow)' | 'pcs' |
+и документ Document.PurchaseInvoice не смог записаться и провестись.
+
+2. в 015450 Проверка вывода сообщения о создании( если я праильно поняла) он не смог найти сроку для вывода тк документ не создался из-за пункта 1. Expected number of lines in <BasisesTree> table is равно 0 and actual number is <2>.
+
+3. 0154149 не нашел строчку Wrong linked row [1] [Shirt] [38/Black] и не создал документ Retail return receipt 3 dated 01.09.2020
+
+4. 024004 правильное значение Quantity ожидалось 7 а по факту 5   Unable to move to the required line in <BasisesTree> table.
+| 'Currency' | 'Price' | 'Quantity' | 'Row presentation' | 'Unit' | 'Use' |
+| 'TRY' | '350,00' | '7,000' | 'Shirt (36/Red)' | 'pcs' | 'No' |
+Value <7,000 > from <Quantity > column is not found.
+
+5. 024027 Остутствует кнопка "sales invoice" тк по документу не создан Purchase Invoice 
+
+6. 970001 пробела опять из-за Purchase Invoice
+
+7. 092003 Проблема в то что данные не совпадают период и склад возможно документ не изменился из-за этого и данные отличаются.
